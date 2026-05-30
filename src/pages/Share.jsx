@@ -129,6 +129,51 @@ export default function Share() {
             </ol>
           </motion.div>
 
+          {/* Kingdom Resources */}
+          <motion.div
+            id="kingdom-resources"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="bg-white rounded-3xl p-8 border border-[#E5C07B]/40 shadow-sm mb-10"
+          >
+            <h3 className="font-display text-xl text-[#4A0404] text-center mb-2">More Free Kingdom Resources</h3>
+            <p className="font-serif text-[#6B6B6B] text-sm text-center mb-6">More free tools from Kingdom Mandate Ministry — built for the Body of Christ.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                { label: 'Main Ministry Site', url: 'https://kingdommandateministry.com' },
+                { label: 'The Bible Companion', url: 'https://thebiblecompanion.online' },
+                { label: 'Kingdom Prayer Wall', url: 'https://prayer.kingdommandateministry.com' },
+                { label: 'Kingdom Fire Companion', url: 'https://fire.kingdommandateministry.com' },
+                { label: 'Kingdom Pathway', url: 'https://pathway.kingdommandateministry.com' },
+                { label: 'Kingdom Declarations', url: 'https://declarations.kingdommandateministry.com' },
+                { label: 'Kingdom Healing Room', url: 'https://healing.kingdommandateministry.com' },
+                { label: 'Kingdom Purpose Finder', url: 'https://purpose.kingdommandateministry.com' },
+                { label: 'Kingdom Identity', url: 'https://identity.kingdommandateministry.com' },
+                { label: 'Kingdom Gift Finder', url: 'https://gifts.kingdommandateministry.com' },
+                { label: 'Kingdom Battle Plan', url: 'https://battle.kingdommandateministry.com' },
+                { label: 'Kingdom Grace Vault', url: 'https://grace.kingdommandateministry.com' },
+                { label: 'Kingdom Revival Fire', url: 'https://revival.kingdommandateministry.com' },
+                { label: 'Kingdom Family Altar', url: 'https://family.kingdommandateministry.com' },
+                { label: 'Kingdom Marketplace', url: 'https://marketplace.kingdommandateministry.com' },
+                { label: 'Kingdom Freedom', url: 'https://freedom.kingdommandateministry.com' },
+                { label: 'YouTube Channel', url: 'https://www.youtube.com/@KingdomMandateMinistry' },
+                { label: 'Contact Us', url: 'mailto:kingdommm.chris@gmail.com' },
+              ].map(({ label, url }) => (
+                <a
+                  key={label}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-3 rounded-xl border border-[#E5C07B]/40 bg-[#F9F7F2] hover:bg-[#4A0404] hover:text-[#E5C07B] hover:border-[#4A0404] transition-all duration-200 group"
+                >
+                  <span className="w-2 h-2 rounded-full bg-[#E5C07B] group-hover:bg-[#E5C07B] shrink-0" />
+                  <span className="font-serif text-sm text-[#3C3C3C] group-hover:text-[#E5C07B] leading-snug">{label}</span>
+                </a>
+              ))}
+            </div>
+          </motion.div>
+
           {/* Inspirational quote */}
           <motion.div
             initial={{ opacity: 0 }}

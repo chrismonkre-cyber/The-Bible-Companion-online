@@ -141,33 +141,55 @@ export default function Layout({ children, currentPageName }) {
       </main>
 
       {/* ── Desktop Footer ── */}
-      <footer className="hidden md:block text-center py-5 border-t border-[#E5C07B]/20 bg-[#4A0404]">
-        <p className="font-serif text-sm text-[#E5C07B] font-medium">
-          © 2026 Kingdom Mandate Ministry | Built by the Grace of God, for the Glory of God
-        </p>
-        <div className="mt-1 flex items-center justify-center gap-3">
-          <button
-            onClick={() => setPrivacyOpen(true)}
-            className="font-serif text-xs text-[#E5C07B]/50 hover:text-[#E5C07B] underline underline-offset-2 transition-colors"
-          >
-            Privacy & Disclaimer
-          </button>
-          <span className="text-[#E5C07B]/30">·</span>
-          <a
-            href="https://www.youtube.com/@TheBibleCompanion"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-serif text-xs text-[#E5C07B]/50 hover:text-[#E5C07B] underline underline-offset-2 transition-colors"
-          >
-            Watch on YouTube
-          </a>
+      <footer className="hidden md:block border-t border-[#E5C07B]/20 bg-[#4A0404] pt-8 pb-5">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mb-5">
+            {[
+              { label: 'Main Site', url: 'https://kingdommandateministry.com' },
+              { label: 'Bible Companion', url: 'https://thebiblecompanion.online' },
+              { label: 'Prayer Wall', url: 'https://prayer.kingdommandateministry.com' },
+              { label: 'Fire', url: 'https://fire.kingdommandateministry.com' },
+              { label: 'Pathway', url: 'https://pathway.kingdommandateministry.com' },
+              { label: 'Declarations', url: 'https://declarations.kingdommandateministry.com' },
+              { label: 'Healing Room', url: 'https://healing.kingdommandateministry.com' },
+              { label: 'Purpose Finder', url: 'https://purpose.kingdommandateministry.com' },
+              { label: 'Identity', url: 'https://identity.kingdommandateministry.com' },
+              { label: 'Gift Finder', url: 'https://gifts.kingdommandateministry.com' },
+              { label: 'Battle Plan', url: 'https://battle.kingdommandateministry.com' },
+              { label: 'Grace Vault', url: 'https://grace.kingdommandateministry.com' },
+              { label: 'Revival Fire', url: 'https://revival.kingdommandateministry.com' },
+              { label: 'Family Altar', url: 'https://family.kingdommandateministry.com' },
+              { label: 'Marketplace', url: 'https://marketplace.kingdommandateministry.com' },
+              { label: 'Freedom', url: 'https://freedom.kingdommandateministry.com' },
+              { label: 'YouTube', url: 'https://www.youtube.com/@KingdomMandateMinistry' },
+              { label: 'Contact', url: 'mailto:kingdommm.chris@gmail.com' },
+            ].map(({ label, url }) => (
+              <a key={label} href={url} target="_blank" rel="noopener noreferrer"
+                className="font-serif text-xs text-[#E5C07B]/60 hover:text-[#E5C07B] transition-colors">
+                {label}
+              </a>
+            ))}
+          </div>
+          <div className="border-t border-[#E5C07B]/20 pt-4 text-center">
+            <p className="font-serif text-xs text-[#E5C07B] font-medium">
+              © 2026 Kingdom Mandate Ministry | Built for the Glory of GOD, by the Grace of GOD
+            </p>
+            <div className="mt-1 flex items-center justify-center gap-3">
+              <button
+                onClick={() => setPrivacyOpen(true)}
+                className="font-serif text-xs text-[#E5C07B]/50 hover:text-[#E5C07B] underline underline-offset-2 transition-colors"
+              >
+                Privacy & Disclaimer
+              </button>
+            </div>
+          </div>
         </div>
       </footer>
 
       {/* ── Mobile Bottom Nav (fixed, z-index above scroll content) ── */}
       <nav className="fixed bottom-0 left-0 right-0 bg-[#4A0404] border-t border-[#E5C07B]/30 md:hidden z-50">
         <div className="text-center pt-1 px-2">
-          <p className="font-serif text-[9px] text-[#E5C07B] leading-tight">© 2026 Kingdom Mandate Ministry | Built by the Grace of God, for the Glory of God</p>
+          <p className="font-serif text-[9px] text-[#E5C07B] leading-tight">© 2026 Kingdom Mandate Ministry | Built for the Glory of GOD, by the Grace of GOD</p>
           <button
             onClick={() => setPrivacyOpen(true)}
             className="font-serif text-[9px] text-[#E5C07B]/50 hover:text-[#E5C07B] underline underline-offset-2 transition-colors"

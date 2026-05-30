@@ -175,6 +175,10 @@ export default function ImmediateHelp() {
               <p><span className="font-semibold text-[#4A0404]">988 Lifeline:</span> Call or text <span className="font-medium">988</span></p>
               <p><span className="font-semibold text-[#4A0404]">Crisis Text Line:</span> Text <span className="font-medium">HOME to 741741</span></p>
               <p><span className="font-semibold text-[#4A0404]">700 Club Prayer:</span> <span className="font-medium">1-800-759-0700</span></p>
+              <div className="border-t border-[#E5C07B]/30 pt-3 mt-3">
+                <p><span className="font-semibold text-[#4A0404]">Kingdom Mandate Ministry:</span> <span className="font-medium">813-649-3150</span></p>
+                <p className="text-xs text-[#6B6B6B] mt-1">Prayer, support & spiritual guidance</p>
+              </div>
             </div>
           </div>
 
